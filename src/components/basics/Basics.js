@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 import Value from "./Value";
 import Buttons from "./Buttons";
@@ -40,12 +40,16 @@ class Basics extends Component {
   }
 
   updateCount(value) {
-    this.setState({ count: this.state.count + value });
+    this.setState((state) => {
+      return { count: state.count + value };
+    });
   }
 
   // Does not need to bind arrow functions
   // updateCount = (value) => {
-  //   this.setState({ count: this.state.count + value });
+  //   this.setState((state) => {
+  //     return { count: state.count + value };
+  //   });
   // }
 
   render() {
@@ -58,4 +62,4 @@ class Basics extends Component {
   }
 }
 
-export default  Basics;
+export default Basics;

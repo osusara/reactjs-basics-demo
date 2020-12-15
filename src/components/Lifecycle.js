@@ -43,7 +43,13 @@ class Lifecycle extends Component {
       <div>
         <h2>Lifecycle Demo</h2>
         <span>Current State: {this.state.value} </span>
-        <button onClick={() => this.setState({ value: this.state.value + 1 })}>
+        <button
+          onClick={() =>
+            this.setState((state) => {
+              return { value: state.value + 1 };
+            })
+          }
+        >
           Add 1
         </button>
       </div>

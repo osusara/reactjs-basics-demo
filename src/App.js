@@ -1,6 +1,5 @@
-import React from 'react';
-import './App.css';
-
+import React from "react";
+import "./App.css";
 
 import Lifecycle from "./components/Lifecycle";
 import Basics from "./components/basics/Basics";
@@ -14,7 +13,9 @@ class App extends React.Component {
   }
 
   toggleComponent() {
-    this.setState({ lifecycle: !this.state.lifecycle });
+    this.setState((state) => {
+      return { lifecycle: !state.lifecycle };
+    });
   }
 
   render() {
