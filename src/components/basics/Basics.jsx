@@ -1,30 +1,30 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
-import Value from "./Value";
-import Buttons from "./Buttons";
+// import Value from "./Value";
+// import Buttons from "./Buttons";
 
-// Buttons component
-// class Buttons extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <button onClick={() => this.props.updateCountValue(1)}>+1</button>
-//         <button onClick={() => this.props.updateCountValue(-1)}>-1</button>
-//       </div>
-//     );
-//   }
-// }
+// *Buttons component
+class Buttons extends Component {
+  render() {
+    return (
+      <div>
+        <button onClick={() => this.props.updateCountValue(1)}>+1</button>
+        <button onClick={() => this.props.updateCountValue(-1)}>-1</button>
+      </div>
+    );
+  }
+}
 
-// Value componenet
-// class Value extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <h1>{this.props.countValue}</h1>
-//       </div>
-//     );
-//   }
-// }
+// *Value componenet
+class Value extends Component {
+  render() {
+    return (
+      <div>
+        <h1>{this.props.countValue}</h1>
+      </div>
+    );
+  }
+}
 
 class Basics extends Component {
   constructor(props) {
